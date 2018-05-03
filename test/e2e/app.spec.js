@@ -43,38 +43,38 @@ describe('End to End Tests', () => {
 
     it('should contain a button with the id of "calculate"', () =>{
     return pageObject
-      .evaluate(() => document.querySelector('button[id=calculate]'))
-      .then(input => expect(input).to.exist)
+      .evaluate(() => document.getElementById('calculate'))
+      .then(button => expect(button).to.exist)
     });
 
     it('should contain an input with the name of "principal"', () =>{
       return pageObject
         .evaluate(() => document.querySelector('input[name=principal]'))
-        .then(input => expect(input).to.exist)
+        .then(principal => expect(principal).to.exist)
       });
 
     it('should contain an input with the name of "interestRate"', () =>{
       return pageObject
         .evaluate(() => document.querySelector('input[name=interestRate]'))
-        .then(input => expect(input).to.exist)
+        .then(interestRate => expect(interestRate).to.exist)
       });
 
     it('should contain an input with the name of "loanTerm"', () =>{
       return pageObject
         .evaluate(() => document.querySelector('input[name=loanTerm]'))
-        .then(input => expect(input).to.exist)
+        .then(loanTerm => expect(loanTerm).to.exist)
       });
 
     it('should contain a dropdown select with the name of "period"', () =>{
       return pageObject
         .evaluate(() => document.querySelector('select[name=period]'))
-        .then(input => expect(input).to.exist)
+        .then(period => expect(period).to.exist)
       });
 
     it('should contain an output with the id of "output"', () =>{
       return pageObject
-         .evaluate(() => document.querySelector('[id=output]'))
-         .then(input => expect(input).to.exist)
+         .evaluate(() => document.getElementById('output'))
+         .then(output => expect(output).to.exist)
           });
 
     it('should correctly calculate mortgage', () =>
